@@ -15,3 +15,4 @@ local colors = function(opts)
 end
 
 colors()
+--colors(require("telescope.themes").get_dropdown{}) -- ドロップダウン形式
