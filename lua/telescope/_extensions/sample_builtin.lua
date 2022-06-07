@@ -1,5 +1,5 @@
-local pickers = require "telescope.pickers" -- pickerを作るために使う主なモジュール
-local finders = require "telescope.finders" -- itemでpickerを一覧表示するためのインタフェース
+local pickers = require("telescope.pickers") -- pickerを作るために使う主なモジュール
+local finders = require("telescope.finders") -- itemでpickerを一覧表示するためのインタフェース
 local conf = require("telescope.config").values -- valuesテーブルはユーザの設定を保持する。
 
 
