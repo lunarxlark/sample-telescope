@@ -4,19 +4,17 @@ local conf = require("telescope.config").values -- valuesテーブルはユー�
 
 
 local colors = function(opts)
-  opts = opts or {}
-  pickers.new(opts, {
-    prompt_title = "colors",
-    finder = finders.new_table {
-      results = {"red", "green", "blue"}
-    },
-    sorter = conf.generic_sorter(opts),
-  }):find()
 	-- for colorschemes
 	--local colorschemes = vim.api.nvim_get_runtime_file("colors/*.vim", true)
 	--for _,c in ipairs(colorschemes) do
 	--  print(c)
 	--end
+	opts = opts or {}
+	pickers.new(opts, {
+		prompt_title = "colors",
+		finder = finders.new_table({
+		sorter = conf.generic_sorter(opts),
+	}):find()
 end
 
 colors()
