@@ -12,6 +12,11 @@ local colors = function(opts)
     },
     sorter = conf.generic_sorter(opts),
   }):find()
+	-- for colorschemes
+	--local colorschemes = vim.api.nvim_get_runtime_file("colors/*.vim", true)
+	--for _,c in ipairs(colorschemes) do
+	--  print(c)
+	--end
 end
 
 colors()
