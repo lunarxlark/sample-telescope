@@ -1,13 +1,13 @@
 local pickers = require("telescope.pickers") -- pickerを作るために使う主なモジュール
 local finders = require("telescope.finders") -- itemでpickerを一覧表示するためのインタフェース
 local conf = require("telescope.config").values -- valuesテーブルはユーザの設定を保持する。
-local make_entry = require "telescope.make_entry"
-local entry_display = require "telescope.pickers.entry_display"
 
 local actions = require("telescope.actions") -- ユーザによってマッピングされる全アクションを保持
 local action_stae = require("telescope.actions.state") -- 現在のpicker,選択範囲、行を取得sするために使用するutils
 
-local colors = function(opts)
+local M = {}
+
+M.colors = function(opts)
 	opts = opts or {}
 	pickers.new(opts, {
 		prompt_title = "colors",
@@ -38,5 +38,5 @@ local colors = function(opts)
 	}):find()
 end
 
-colors()
 --colors(require("telescope.themes").get_dropdown{}) -- ドロップダウン形式
+return M
